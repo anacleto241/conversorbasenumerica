@@ -1,101 +1,211 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+.pagina {
+  background-color: #141414;
+  color: #dddddd;
   margin: 0;
-  padding: 20px;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-h1 {
+.banner {
+  width: 100%;
+  height: 1000px;
+  background-image: url(banner.png);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #141414;
+}
+
+.banner-conteudo {
   text-align: center;
-  color: #333;
+}
+
+.titulo-banner {
+  font-size: 72px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.botoes-banner {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.botao-banner {
+  background-color: rgb(33, 162, 201);
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 999px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-banner:hover {
+  background-color: #27408b;
+}
+
+.conteudo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 100px;
+  gap: 40px;
+}
+
+.texto {
+  flex: 1;
+  text-align: left;
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+.imagem-lateral {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.titulo-secao {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.botao-conversao {
+  display: inline-block;
+  margin-top: 30px;
+  background-color:  rgb(33, 162, 201);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 9999px; /* botão arredondado */
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+
+.botao-conversao:hover {
+  background-color: #27408b;
+}
+
+.secao-equipe {
+  padding: 80px 40px;
+  text-align: center;
+  background-color: #141414;
+  color: #fff;
+}
+
+.cards-equipe {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.card-membro {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 12px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foto-membro {
+  width: 140px;
+  height: 140px;
+  border: 2px dashed #00e1ff;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.nome-membro {
+  font-size: 18px;
+  color: #fff;
+  margin: 0;
+}
+
+.secao-conversor {
+  padding: 60px 30px;
+  background-color: #141414;
+  color: #fff;
+  min-height: 100vh;
+  text-align: center;
 }
 
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
 }
 
-.card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 15px;
-  flex: 1 1 300px;
-  min-width: 250px;
+.card-base {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  padding: 30px;
+  width: 300px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  text-align: left;
 }
 
-.card h2 {
+.card-base h2 {
   margin-top: 0;
+  color: #00e1ff;
 }
 
-input[type="text"] {
+.card-base input[type="text"] {
   width: 100%;
-  padding: 8px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-
-button {
-  background-color: #4CAF50;
-  color: white;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 6px;
   border: none;
-  margin: 5px 3px;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 4px;
+  background-color: #2c2c2c;
+  color: #fff;
+  font-size: 16px;
 }
 
-button:hover {
-  background-color: #45a049;
+.grupo-botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-base button {
+  background-color: #0baabe;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-base button:hover {
+  background-color: #27408b;
 }
 
 .resultado {
-  margin-top: 8px;
-  padding: 6px;
-  background-color: #f0f0f0;
-  border-radius: 4px;
+  background-color: #2e2e2e;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  color: #0f0;
 }
 
 .error {
   color: red;
-  margin-top: 6px;
-}
-
-/* style.css */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  text-align: center;
-}
-
-h1 {
-  color: #333;
-  margin-top: 20px;
-}
-
-p {
-  font-size: 18px;
-  color: #555;
-  max-width: 600px;
-  margin: 20px auto;
-}
-
-nav {
-  margin-top: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #007BFF;
-  font-size: 20px;
-  margin: 0 10px;
-}
-
-nav a:hover {
-  color: #0056b3;
-  text-decoration: underline;
+  margin-top: 10px;
 }

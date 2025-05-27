@@ -1,17 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
     <title>Equipe</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>
-    <h1>Equipe do Projeto</h1>
-    <ul>
-        <li>Fulano - Implementação do conversor</li>
-        <li>Ciclano - Estilização e layout</li>
-        <li>Beltrano - Integração com Firebase Studio</li>
-        <!-- Adicione outros integrantes -->
-    </ul>
-    <a href="/">Voltar para Início</a>
+<body class="pagina">
+    <section class="secao-equipe">
+        <h1 class="titulo-secao">Equipe do Projeto</h1>
+        <div class="cards-equipe">
+            <div class="card-membro">
+                <div class="foto-membro">
+                    <img src="{{ url_for('static', filename='css/fabrecio.jpg') }}" style="width: 140px; height: 140px; border-radius: 99px;">
+                </div>
+                <p class="nome-membro">Fabrício Anacleto</p>
+            </div>
+            <div class="card-membro">
+                <div class="foto-membro">
+                    <img src="{{ url_for('static', filename='css/kkjao.jpg') }}" style="width: 140px; height: 140px; border-radius: 99px;">
+                </div>
+                <p class="nome-membro">João Henrique</p>
+            </div>
+            <div class="card-membro">
+                <div class="foto-membro">
+                    <img src="{{ url_for('static', filename='css/lois.jpg') }}" style="width: 140px; height: 140px; border-radius: 99px;">
+                </div>
+                <p class="nome-membro">Luís Gustavo</p>
+            </div>
+            <div class="card-membro">
+                <div class="foto-membro">
+                    <img src="{{ url_for('static', filename='css/pedro.jpg') }}" style="width: 140px; height: 140px; border-radius: 99px;">
+                </div>
+                <p class="nome-membro">Pedro Bitencourt</p>
+            </div>
+        </div>
+        <a href="{{ url_for('index') }}" class="botao-conversao">Voltar para Início</a>
+    </section>
 </body>
 </html>
+

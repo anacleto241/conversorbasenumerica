@@ -5,62 +5,74 @@
 <title>Conversor Numérico</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>
-<h1>Conversor Numérico</h1>
+<body class="pagina">
+    <section class="secao-conversor">
+        <h1 class="titulo-secao">Conversor Numérico</h1>
 
-<div class="cards-container">
-  <!-- Card Decimal -->
-  <div class="card">
-    <h2>Decimal para:</h2>
-    <input type="text" id="decimalInput" placeholder="Digite um número decimal">
-    <button onclick="converter('decimal', 'binario', 'decimalInput', 'decimalBinario')">Binário</button>
-    <button onclick="converter('decimal', 'hexadecimal', 'decimalInput', 'decimalHexadecimal')">Hexadecimal</button>
-    <button onclick="converter('decimal', 'octal', 'decimalInput', 'decimalOctal')">Octal</button>
-    <div class="resultado" id="decimalBinario"></div>
-    <div class="resultado" id="decimalHexadecimal"></div>
-    <div class="resultado" id="decimalOctal"></div>
-    <div class="error" id="decimalErro"></div>
-  </div>
+        <div class="cards-container">
+            <!-- Decimal -->
+            <div class="card-base">
+                <h2>Decimal para:</h2>
+                <input type="text" id="decimalInput" placeholder="Digite um número decimal">
+                <div class="grupo-botoes">
+                    <button onclick="converter('decimal', 'binario', 'decimalInput', 'decimalBinario')">Binário</button>
+                    <button onclick="converter('decimal', 'hexadecimal', 'decimalInput', 'decimalHexadecimal')">Hexadecimal</button>
+                    <button onclick="converter('decimal', 'octal', 'decimalInput', 'decimalOctal')">Octal</button>
+                </div>
+                <div class="resultado" id="decimalBinario"></div>
+                <div class="resultado" id="decimalHexadecimal"></div>
+                <div class="resultado" id="decimalOctal"></div>
+                <div class="error" id="decimalErro"></div>
+            </div>
 
-  <!-- Card Binário -->
-  <div class="card">
-    <h2>Binário para:</h2>
-    <input type="text" id="binarioInput" placeholder="Digite um número binário">
-    <button onclick="converter('binario', 'decimal', 'binarioInput', 'binarioDecimal')">Decimal</button>
-    <button onclick="converter('binario', 'hexadecimal', 'binarioInput', 'binarioHexadecimal')">Hexadecimal</button>
-    <button onclick="converter('binario', 'octal', 'binarioInput', 'binarioOctal')">Octal</button>
-    <div class="resultado" id="binarioDecimal"></div>
-    <div class="resultado" id="binarioHexadecimal"></div>
-    <div class="resultado" id="binarioOctal"></div>
-    <div class="error" id="binarioErro"></div>
-  </div>
+            <!-- Binário -->
+            <div class="card-base">
+                <h2>Binário para:</h2>
+                <input type="text" id="binarioInput" placeholder="Digite um número binário">
+                <div class="grupo-botoes">
+                    <button onclick="converter('binario', 'decimal', 'binarioInput', 'binarioDecimal')">Decimal</button>
+                    <button onclick="converter('binario', 'hexadecimal', 'binarioInput', 'binarioHexadecimal')">Hexadecimal</button>
+                    <button onclick="converter('binario', 'octal', 'binarioInput', 'binarioOctal')">Octal</button>
+                </div>
+                <div class="resultado" id="binarioDecimal"></div>
+                <div class="resultado" id="binarioHexadecimal"></div>
+                <div class="resultado" id="binarioOctal"></div>
+                <div class="error" id="binarioErro"></div>
+            </div>
 
-  <!-- Card Hexadecimal -->
-  <div class="card">
-    <h2>Hexadecimal para:</h2>
-    <input type="text" id="hexadecimalInput" placeholder="Digite um número hexadecimal">
-    <button onclick="converter('hexadecimal', 'binario', 'hexadecimalInput', 'hexadecimalBinario')">Binário</button>
-    <button onclick="converter('hexadecimal', 'decimal', 'hexadecimalInput', 'hexadecimalDecimal')">Decimal</button>
-    <button onclick="converter('hexadecimal', 'octal', 'hexadecimalInput', 'hexadecimalOctal')">Octal</button>
-    <div class="resultado" id="hexadecimalBinario"></div>
-    <div class="resultado" id="hexadecimalDecimal"></div>
-    <div class="resultado" id="hexadecimalOctal"></div>
-    <div class="error" id="hexadecimalErro"></div>
-  </div>
+            <!-- Hexadecimal -->
+            <div class="card-base">
+                <h2>Hexadecimal para:</h2>
+                <input type="text" id="hexadecimalInput" placeholder="Digite um número hexadecimal">
+                <div class="grupo-botoes">
+                    <button onclick="converter('hexadecimal', 'binario', 'hexadecimalInput', 'hexadecimalBinario')">Binário</button>
+                    <button onclick="converter('hexadecimal', 'decimal', 'hexadecimalInput', 'hexadecimalDecimal')">Decimal</button>
+                    <button onclick="converter('hexadecimal', 'octal', 'hexadecimalInput', 'hexadecimalOctal')">Octal</button>
+                </div>
+                <div class="resultado" id="hexadecimalBinario"></div>
+                <div class="resultado" id="hexadecimalDecimal"></div>
+                <div class="resultado" id="hexadecimalOctal"></div>
+                <div class="error" id="hexadecimalErro"></div>
+            </div>
 
-  <!-- Card Octal -->
-  <div class="card">
-    <h2>Octal para:</h2>
-    <input type="text" id="octalInput" placeholder="Digite um número octal">
-    <button onclick="converter('octal', 'binario', 'octalInput', 'octalBinario')">Binário</button>
-    <button onclick="converter('octal', 'decimal', 'octalInput', 'octalDecimal')">Decimal</button>
-    <button onclick="converter('octal', 'hexadecimal', 'octalInput', 'octalHexadecimal')">Hexadecimal</button>
-    <div class="resultado" id="octalBinario"></div>
-    <div class="resultado" id="octalDecimal"></div>
-    <div class="resultado" id="octalHexadecimal"></div>
-    <div class="error" id="octalErro"></div>
-  </div>
-</div>
+            <!-- Octal -->
+            <div class="card-base">
+                <h2>Octal para:</h2>
+                <input type="text" id="octalInput" placeholder="Digite um número octal">
+                <div class="grupo-botoes">
+                    <button onclick="converter('octal', 'binario', 'octalInput', 'octalBinario')">Binário</button>
+                    <button onclick="converter('octal', 'decimal', 'octalInput', 'octalDecimal')">Decimal</button>
+                    <button onclick="converter('octal', 'hexadecimal', 'octalInput', 'octalHexadecimal')">Hexadecimal</button>
+                </div>
+                <div class="resultado" id="octalBinario"></div>
+                <div class="resultado" id="octalDecimal"></div>
+                <div class="resultado" id="octalHexadecimal"></div>
+                <div class="error" id="octalErro"></div>
+            </div>
+        </div>
+
+        <a href="{{ url_for('index') }}" class="botao-conversao">Voltar para Início</a>
+    </section>
 
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
